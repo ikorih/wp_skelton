@@ -1,0 +1,58 @@
+# --------------------------------------
+# gulp設定ファイル
+# プロジェクト開始時にを編集してください
+# --------------------------------------
+
+themeName: &themeName 'test' # テーマのディレクトリ名を指定
+
+project:
+  projectURL: 'localhost:8000'
+  themeName: *themeName
+
+# ----------------------------------------
+# パス設定
+# ----------------------------------------
+srcRoot:  './src/assets/'
+destRoot:  '../app/wp-content/themes/'
+
+path:
+  src:
+    php:        'src/php/'
+    scss:       'src/assets/scss/'
+    img:        'src/assets/img/'
+    js:         'src/assets/js/'
+    jsLibs:     'src/assets/js/libs/'
+    font:       'src/assets/font/'
+    static:     'src/static/'
+
+  dest:
+    php:          ''
+    css:          '/dist/css/'
+    img:          '/dist/img/'
+    js:           '/dist/js/'
+    jsLibs:       '/dist/js/libs/'
+    font:         '/dist/font/'
+    clean:        '/**/*'
+
+# ----------------------------------------
+# タスク設定
+# ----------------------------------------
+
+# Styleの設定
+style:
+  indent: "\t" # インデントの設定: "\t" or "    "
+  lineFeed: 'LF' # 改行コードの設定: CR+LF, LF, CR
+
+webpack:
+  entry_point: './src/assets/js/app.js'
+  dest: path.dest.js
+
+# サーバー設定 BrowserSyncオプション
+server:
+  port: 3000 # ポートを指定します（デフォルトは3000）
+  open: 'external' # External IPでブラウザを開けます（スマホで確認する時に重宝）
+
+# サーバー設定 BrowserSyncオプション
+browserSync:
+  injectChanges: true
+

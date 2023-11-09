@@ -1,0 +1,54 @@
+# -------------------------------------------
+# wordpress・mysqlコンテナの設定
+# -------------------------------------------
+
+# プロダクトの名前 作成されるcontainer名の接頭語として使用
+PRODUCTION_NAME=test
+
+# 以下は個人開発環境用
+# localhostのip
+LOCAL_SERVER_IP=127.0.0.1
+# local wordpressを紐付けるPort名（ex: 8080)
+LOCAL_SERVER_PORT=8000
+# localのmysqlを紐付けるPort名（ex: 3306)
+LOCAL_DB_PORT=3306
+
+# WordPress User
+ADMIN_USER=admin
+ADMIN_PASS=admin
+ADMIN_EMAIL=hello@hirokifujikami.com
+
+#
+# WordPress Database
+#
+MYSQL_USER=wordpress
+MYSQL_NAME=wordpress
+MYSQL_PASS=wordpress
+MYSQL_ROOT_PASS=wordpress
+
+
+# -------------------------------------------
+# wordmoveコンテナの設定
+# -------------------------------------------
+# 全て本番環境の情報
+# URL
+PRODUCTION_URL=http://xxxxxxxxx.xxx
+# wordpressのディレクトリの絶対パス
+PRODUCTION_DIR_PATH=xxx
+# DB名
+PRODUCTION_DB_NAME=xxx
+# DBのユーザー名
+PRODUCTION_DB_USER=xxx
+# DBのパスワード
+PRODUCTION_DB_PASSWORD=xxx
+# DBのホスト名
+PRODUCTION_DB_HOST=xxx
+# DBの接続ポート
+PRODUCTION_DB_PORT=3306
+# SSHホスト名
+PRODUCTION_SSH_HOST=xxx
+# SSHユーザー名
+PRODUCTION_SSH_USER=xxxx
+# SSHポート名
+PRODUCTION_SSH_PORT=22
+

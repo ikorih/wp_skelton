@@ -1,0 +1,53 @@
+// font
+// stylelint-disable value-keyword-case
+$font: (
+	family: (
+		sans_serif: (
+			YakuHanJP,
+			"Noto Sans",
+			"Noto Sans JP",
+			"NotoSansJP",
+			"游ゴシック体",
+			YuGothic,
+			"游ゴシック Medium",
+			"Yu Gothic Medium",
+			Meiryo,
+			sans-serif
+		),
+		sans_serif_yugothic: (
+			"游ゴシック体",
+			YuGothic,
+			"游ゴシック Medium",
+			"Yu Gothic Medium",
+			Arial,
+			Meiryo,
+			sans-serif
+		),
+		serif: (
+			"Literata",
+			"游明朝",
+			YuMincho,
+			"ヒラギノ明朝 ProN W3",
+			"Hiragino Mincho ProN",
+			"HG明朝E",
+			"ＭＳ Ｐ明朝",
+			"ＭＳ 明朝",
+			serif
+		),
+	),
+	size: (
+		base: (
+			sp: 1.3rem,
+			tablet: 1.4rem,
+			pc: 1.5rem
+		)
+	),
+	line_height: (
+		base: 1.78,
+		heading: 1.3
+	),
+	letter_spacing: (
+		base: 0.05em
+	)
+);
+// stylelint-enable value-keyword-case

@@ -1,0 +1,26 @@
+$header: (
+	height: (
+		sp: 6.5rem,
+		pc: 10rem
+	),
+	logo: (
+		width: (
+			sp: 20rem,
+			pc: 28rem
+		)
+	)
+);
+
+
+.l-header{
+	background-color: map-deep-get($color, theme, base);
+	&__innr{
+		display: flex;
+	}
+	&__nav{
+		margin-left: auto;
+	}
+	&__branding{
+		width: map-deep-get($header,logo, width, sp);
+	}
+}

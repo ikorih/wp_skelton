@@ -1,0 +1,71 @@
+
+@mixin image_fit($prop: cover){
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: $prop;
+	object-position: 50% 50%;
+	font-family: 'object-fit: #{$prop}; object-position: center;';
+}
+
+// ---------------------------------------------------------
+// media-breakpoint-up
+// メディアクエリを呼び出す
+//
+// ---------------------------------------------------------
+@mixin media_breakpoint_up($breakpoint) {
+	@media (min-width: #{$breakpoint}) {
+		@content;
+	}
+}
+
+
+// ---------------------------------------------------------
+// lhTopCrop
+// テキスト上部の余白を取り除く
+//
+// Required arguments:
+// `$line-height` line-height
+//
+// Example of use:
+// lhTopCrop(1.8)
+//
+// @returen ネガティブマージンを持った擬似要素
+// ---------------------------------------------------------
+@mixin lhTopCrop($line-height, $capital-letter: 1) {
+  &::before {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
+  }
+}
+
+
+// ---------------------------------------------------------
+// lhBottomCrop
+// テキスト下部の余白を取り除く
+//
+// Required arguments:
+// `$line-height` line-height
+//
+// Example of use:
+// lhBottomCrop(1.8)
+//
+// @returen ネガティブマージンを持った擬似要素
+// ---------------------------------------------------------
+@mixin lhBottomCrop($line-height, $capital-letter: 1) {
+  &::after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+    margin-bottom: calc((#{$capital-letter} - #{$line-height}) * 0.5em);
+  }
+}
+
+

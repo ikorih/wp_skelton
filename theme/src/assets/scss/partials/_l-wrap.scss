@@ -1,0 +1,29 @@
+
+// 縦方向のスペーシング
+.l-wrap {
+	margin: map_deep_get($layout, spacing, vertical, base, sp) 0;
+	@include media_breakpoint_up(map_deep_get($breakpoint, tablet )) {
+		margin: map_deep_get($layout, spacing, vertical, base, pc) 0;
+	}
+	&.-s{
+		margin: map_deep_get($layout, spacing, vertical, small, sp) 0;
+		@include media_breakpoint_up(map_deep_get($breakpoint, tablet )) {
+			margin: map_deep_get($layout, spacing, vertical, small, pc) 0;
+		}
+	}
+	&.-m{
+		margin: map_deep_get($layout, spacing, vertical, medium, sp) 0;
+		@include media_breakpoint_up(map_deep_get($breakpoint, tablet )) {
+			margin: map_deep_get($layout, spacing, vertical, medium, pc) 0;
+		}
+	}
+	&.-l{
+		margin: map_deep_get($layout, spacing, vertical, large, sp) 0;
+		@include media_breakpoint_up(map_deep_get($breakpoint, tablet )) {
+			margin: map_deep_get($layout, spacing, vertical, large, pc) 0;
+		}
+	}
+}
+
+
+

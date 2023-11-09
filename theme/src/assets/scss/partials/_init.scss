@@ -1,0 +1,93 @@
+//   #init
+//   基本となるスタイリング
+
+html {
+	font-size: math.div( 100, 375 ) * 10vw;
+	@include media_breakpoint_up(map-deep-get($breakpoint, pc)) {
+		font-size: math.div( 100, 1420 ) * 10vw;
+	}
+	// @include media_breakpoint_up(map-deep-get($breakpoint, artboard)) {
+	// 	font-size: 62.5%;
+	// }
+}
+
+body {
+	color: map-deep-get($color, text, base);
+	font-family: map-deep-get($font, family, sans_serif);
+	letter-spacing: map-deep-get($font, letter_spacing, base);
+	line-height: map-deep-get($font, line_height, base);
+	// フォントレンダリング設定 for Mac: 1x解像度ではsubpixel、2x以上の解像度ではgrayscale
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: unset;
+	@media only screen and (-webkit-min-device-pixel-ratio: 2),
+		(min-resolution: 2dppx) {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	font-size: map-deep-get($font, size, base, sp);
+	@include media_breakpoint_up(map-deep-get($breakpoint, pc)) {
+		font-size: map-deep-get($font, size, base, pc);
+	}
+}
+
+html {
+	min-height: 100%;
+	display: flex;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+}
+
+#colophon,
+footer {
+	flex-shrink: 0;
+	margin: auto 0 0;
+}
+
+#content,
+main {
+	display: block;
+	width: 100%;
+	flex: 1 0 auto;
+	min-height: 1px; /*IE11 img resizing bug*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: map-deep-get($font, line_height, heading);
+}
+
+p {
+	line-height: map-deep-get($font, line_height, base);
+	margin: 0 0 1em;
+	font-size: map-deep-get($font, size, base, sp);
+	@include media_breakpoint_up(map-deep-get($breakpoint, pc)) {
+		font-size: map-deep-get($font, size, base, pc);
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+ul,
+ol {
+	margin: 0 0 3em;
+	padding: 0 0 0 2em;
+	li {
+		margin: 0 0 0.5em;
+	}
+}
+
+
+
+
+
+
+

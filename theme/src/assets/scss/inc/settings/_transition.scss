@@ -1,0 +1,16 @@
+// transition
+$transition: (
+	duration: (
+		fast: 0.25s,
+		base: 0.5s,
+		slow: 0.75s,
+		slower: 1.5s
+	),
+	easing: (
+		linear: linear,
+		smooth: cubic-bezier(0.165, 0.84, 0.44, 1),
+		swing: cubic-bezier(0.19, 1, 0.22, 1),
+		overlap: cubic-bezier(0.6, 0, 0.3, 1),
+		bound: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+	)
+);
